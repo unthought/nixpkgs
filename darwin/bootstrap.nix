@@ -6,11 +6,11 @@
   nix.settings = {
     substituters = [
       "https://cache.nixos.org/"
-      "https://malo.cachix.org"
+      "https://unthought-nixpkgs.cachix.org"
     ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "malo.cachix.org-1:fJL4+lpyMs/1cdZ23nPQXArGj8AS7x9U67O8rMkkMIo="
+      "unthought-nixpkgs.cachix.org-1:RjTHHIWxtzVTK1HhkLPF5lc3/nsHo5/V9Eti2bFhdG0="
     ];
 
     trusted-users = [ "@admin" ];
