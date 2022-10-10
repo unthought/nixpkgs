@@ -32,7 +32,7 @@ jobs:
     - name: Setup Cachix
       uses: cachix/cachix-action@v10
       with:
-        name: malo
+        name: unthought-nixpkgs
         authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
     - name: If scheduled, update inputs
@@ -80,7 +80,7 @@ jobs:
     - name: Setup Cachix
       uses: cachix/cachix-action@v10
       with:
-        name: malo
+        name: unthought-nixpkgs
         authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
     - name: Build and switch to home-manager env
