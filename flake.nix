@@ -1,5 +1,5 @@
 {
-  description = "Malo’s Nix system configs, and some other useful stuff.";
+  description = "Dan’s Nix system configs, and some other useful stuff.";
 
   inputs = {
     # Package sets
@@ -47,10 +47,10 @@
       homeManagerStateVersion = "22.11";
 
       primaryUserInfo = {
-        username = "malo";
-        fullName = "Malo Bourgon";
-        email = "mbourgon@gmail.com";
-        nixConfigDirectory = "/Users/malo/.config/nixpkgs";
+        username = "unthought";
+        fullName = "Dan Mueller";
+        email = "dan@unthought.org";
+        nixConfigDirectory = "/Users/unthought/.config/nixpkgs";
       };
 
       # Modules shared by most `nix-darwin` personal configurations.
@@ -97,17 +97,17 @@
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
         # My Apple Silicon macOS laptop config
-        MaloBookPro = darwinSystem {
+        Sunray = darwinSystem {
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
             {
               users.primaryUser = primaryUserInfo;
-              networking.computerName = "Malo’s 💻";
-              networking.hostName = "MaloBookPro";
-              networking.knownNetworkServices = [
-                "Wi-Fi"
-                "USB 10/100/1000 LAN"
-              ];
+              networking.computerName = "Sunray";
+              networking.hostName = "sunray";
+              #networking.knownNetworkServices = [
+              #  "Wi-Fi"
+              #  "USB 10/100/1000 LAN"
+              #];
             }
           ];
         };
@@ -129,8 +129,8 @@
 
       # Config I use with Linux cloud VMs
       # Build and activate on new system with:
-      # `nix build .#homeConfigurations.malo.activationPackage; ./result/activate`
-      homeConfigurations.malo = home-manager.lib.homeManagerConfiguration {
+      # `nix build .#homeConfigurations.unthought.activationPackage; ./result/activate`
+      homeConfigurations.unthought = home-manager.lib.homeManagerConfiguration {
         pkgs = import inputs.nixpkgs-unstable {
           system = "x86_64-linux";
           inherit (nixpkgsConfig) config overlays;
@@ -207,10 +207,10 @@
 
       darwinModules = {
         # My configurations
-        malo-bootstrap = import ./darwin/bootstrap.nix;
-        malo-defaults = import ./darwin/defaults.nix;
-        malo-general = import ./darwin/general.nix;
-        malo-homebrew = import ./darwin/homebrew.nix;
+        unthought-bootstrap = import ./darwin/bootstrap.nix;
+        unthought-defaults = import ./darwin/defaults.nix;
+        unthought-general = import ./darwin/general.nix;
+        unthought-homebrew = import ./darwin/homebrew.nix;
 
         # Modules I've created
         programs-nix-index = import ./modules/darwin/programs/nix-index.nix;
@@ -219,17 +219,17 @@
 
       homeManagerModules = {
         # My configurations
-        malo-colors = import ./home/colors.nix;
-        malo-config-files = import ./home/config-files.nix;
-        malo-fish = import ./home/fish.nix;
-        malo-git = import ./home/git.nix;
-        malo-git-aliases = import ./home/git-aliases.nix;
-        malo-gh-aliases = import ./home/gh-aliases.nix;
-        malo-kitty = import ./home/kitty.nix;
-        malo-neovim = import ./home/neovim.nix;
-        malo-packages = import ./home/packages.nix;
-        malo-starship = import ./home/starship.nix;
-        malo-starship-symbols = import ./home/starship-symbols.nix;
+        unthought-colors = import ./home/colors.nix;
+        unthought-config-files = import ./home/config-files.nix;
+        unthought-fish = import ./home/fish.nix;
+        unthought-git = import ./home/git.nix;
+        unthought-git-aliases = import ./home/git-aliases.nix;
+        unthought-gh-aliases = import ./home/gh-aliases.nix;
+        unthought-kitty = import ./home/kitty.nix;
+        unthought-neovim = import ./home/neovim.nix;
+        unthought-packages = import ./home/packages.nix;
+        unthought-starship = import ./home/starship.nix;
+        unthought-starship-symbols = import ./home/starship-symbols.nix;
 
         # Modules I've created
         colors = import ./modules/home/colors;
@@ -243,7 +243,7 @@
       # }}}
 
       # Add re-export `nixpkgs` packages with overlays.
-      # This is handy in combination with `nix registry add my /Users/malo/.config/nixpkgs`
+      # This is handy in combination with `nix registry add my /Users/unthought/.config/nixpkgs`
     } // flake-utils.lib.eachDefaultSystem (system: {
       legacyPackages = import inputs.nixpkgs-unstable {
         inherit system;
