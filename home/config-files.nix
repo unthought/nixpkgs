@@ -8,7 +8,7 @@
       params = {
         author-name = config.programs.git.userName;
         author-email = config.programs.git.userEmail;
-        github-username = "malob";
+        github-username = "unthought";
       };
     };
     nix.enable = true;
