@@ -28,11 +28,11 @@
     expose-group-by-app = false;
     mru-spaces = false;
     tilesize = 128;
-    # Disable all hot corners
-    wvous-bl-corner = 1;
-    wvous-br-corner = 1;
-    wvous-tl-corner = 1;
-    wvous-tr-corner = 1;
+    # hot corners
+    wvous-bl-corner = 1; # disable
+    wvous-br-corner = 1; # disable
+    wvous-tl-corner = 1; # disable
+    wvous-tr-corner = 10; # put display to sleep
   };
 
   # Login and lock screen
