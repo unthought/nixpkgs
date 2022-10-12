@@ -114,10 +114,12 @@ in
     ":q" = "exit";
     cat = "${bat}/bin/bat";
     du = "${du-dust}/bin/dust";
+    e = "$EDITOR";
     g = "${gitAndTools.git}/bin/git";
     la = "ll -a";
     ll = "ls -l --time-style long-iso --icons";
     ls = "${exa}/bin/exa";
+    l = "${exa}/bin/exa";
     tb = "toggle-background";
   };
 

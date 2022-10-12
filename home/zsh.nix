@@ -27,7 +27,7 @@ in
   };
 
   # Aliases
-  programs.fish.shellAliases = with pkgs; {
+  programs.zsh.shellAliases = with pkgs; {
     # Other
     ".." = "cd ..";
     ":q" = "exit";
