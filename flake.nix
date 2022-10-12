@@ -222,6 +222,7 @@
         unthought-colors = import ./home/colors.nix;
         unthought-config-files = import ./home/config-files.nix;
         unthought-fish = import ./home/fish.nix;
+        unthought-zsh = import ./home/zsh.nix;
         unthought-git = import ./home/git.nix;
         unthought-git-aliases = import ./home/git-aliases.nix;
         unthought-gh-aliases = import ./home/gh-aliases.nix;
