@@ -40,43 +40,113 @@
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zoxide.enable
   programs.zoxide.enable = true;
 
+  programs.neomutt.enable = true;
+  programs.fzf.enable = true;
+
+  programs.tmux.enable = true;
+
+  programs.taskwarrior.enable = true;
+
+  programs.nushell.enable = true;
+
   home.packages = with pkgs; [
-    # Some basics
+    # uncategorized
     abduco # lightweight session management
-    bandwhich # display current network utilization by process
-    bottom # fancy version of `top` with ASCII graphs
     browsh # in terminal browser
-    coreutils
-    curl
-    du-dust # fancy version of `du`
-    exa # fancy version of `ls`
-    fd # fancy version of `find`
-    htop # fancy version of `top`
-    hyperfine # benchmarking tool
-    mosh # wrapper for `ssh` that better and not dropping connections
-    nodePackages.speed-test # nice speed-test tool
-    parallel # runs commands in parallel
     # python3Packages.shell-functools # a collection of functional programming tools for the shell
-    ripgrep # better version of `grep`
     tealdeer # rust implementation of `tldr`
     thefuck
-    unrar # extract RAR archives
-    wget
-    xz # extract XZ archives
+    gnuplot
+    qrencode
+    cloc
+    imagemagick
+    grc
 
-    # Dev stuff
-    # (agda.withPackages (p: [ p.standard-library ]))
-    cloc # source code line counter
+    helix
+
+    # core binaries
+    coreutils
+    binutils # expect from system
+    moreutils
+
+    # processes
+    #parallel # runs commands in parallel (clash with moreutils)
+    #psutils # broken
+    pstree
+    bottom # fancy version of `top` with ASCII graphs
+    hyperfine # benchmarking tool
+
+    # filesystem
+    tree
+    du-dust # fancy version of `du`
+    exa # fancy version of `ls`
+
+    # search
+    fd # fancy version of `find`
+    findutils
+    gnugrep
+    ripgrep
+
+    # text manipulation
+    gnused
+    gawk
+    jq
+    xmlstarlet
+
+    # compression
+    gnutar
+    unrar # unfree
+    unzip
+    xz
+    bzip2
+    #p7zip # known insecure
+
+    # downloads
+    curl
+    wget
+    aria2
+
+    # secure comms
+    mosh # wrapper for `ssh` that better and not dropping connections
+    #autossh
+    #wireguard-go # expect from system
+    #wireguard-tools # expect from system
+
+    # general networking
+    nmap
+    #dnsmasq # autolaunch?
+    prettyping
+    socat
+    rsync
+    bandwhich # display current network utilization by process
+    nodePackages.speed-test # nice speed-test tool
+
+    # task related
+    timewarrior
+    taskwarrior-tui
+    tasksh
+    #taskjuggler
+    #smos
+
+    asdf-vm # maybe belongs into project config
+    packer
+
+    awscli2
+    #aws-iam-authenticator
+    amazon-ecr-credential-helper
+    aws-vault
+    s3cmd
+    chamber
     google-cloud-sdk
+    #azure-cli # 2022-09-17 disable because broken
+
     haskellPackages.cabal-install
     haskellPackages.hoogle
     haskellPackages.hpack
     haskellPackages.implicit-hie
     # idris2
-    jq
     nodePackages.typescript
     nodejs-16_x
-    s3cmd
     stack
 
     # Useful nix related tools

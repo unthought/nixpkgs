@@ -38,6 +38,7 @@
     bashInteractive
     fish
     zsh
+    nushell
   ];
 
   # Make Fish the default shell
@@ -54,6 +55,8 @@
     end
   '';
   environment.variables.SHELL = "${pkgs.fish}/bin/fish";
+  #environment.variables.SHELL = "${pkgs.zsh}/bin/zsh";
+  #environment.variables.SHELL = "${pkgs.nushell}/bin/nu";
 
   # Install and setup ZSH to work with nix(-darwin) as well
   programs.zsh.enable = true;
