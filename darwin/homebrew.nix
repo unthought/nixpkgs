@@ -83,7 +83,7 @@ in
     "anki"
     "arq"
     "balenaetcher"
-    "cleanmymac"
+    #"cleanmymac"
     "element"
     "etrecheckpro"
     "discord"
