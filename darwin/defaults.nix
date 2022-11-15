@@ -1,7 +1,10 @@
 {
   system.defaults.NSGlobalDomain = {
+    "com.apple.keyboard.fnState" = true;
+    "com.apple.mouse.tapBehavior" = 1;
     "com.apple.trackpad.scaling" = 3.0;
-    AppleInterfaceStyleSwitchesAutomatically = true;
+    AppleInterfaceStyle = "Dark";
+    AppleInterfaceStyleSwitchesAutomatically = false;
     AppleMeasurementUnits = "Centimeters";
     AppleMetricUnits = 1;
     AppleShowScrollBars = "Automatic";
@@ -46,7 +49,8 @@
 
   # Trackpad
   system.defaults.trackpad = {
-    Clicking = false;
+    Clicking = true;
+    Dragging = true;
     TrackpadRightClick = true;
   };
 
