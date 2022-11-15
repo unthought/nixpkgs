@@ -112,8 +112,8 @@ in
     "transmit"
     "visual-studio-code"
     "vlc"
-    "yubico-yubikey-manager"
-    "yubico-yubikey-personalization-gui"
+    #"yubico-yubikey-manager"
+    #"yubico-yubikey-personalization-gui"
   ];
 
   # Configuration related to casks
