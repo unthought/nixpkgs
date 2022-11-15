@@ -215,6 +215,7 @@
         unthought-defaults = import ./darwin/defaults.nix;
         unthought-general = import ./darwin/general.nix;
         unthought-homebrew = import ./darwin/homebrew.nix;
+        unthought-yabai = import ./darwin/yabai.nix;
 
         # Modules I've created
         programs-nix-index = import ./modules/darwin/programs/nix-index.nix;
