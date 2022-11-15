@@ -105,7 +105,7 @@ in
     "secretive"
     "signal"
     "skype"
-    "steam"
+    #"steam"
     "superhuman"
     "tor-browser"
     "transmission"
