@@ -104,10 +104,14 @@
               users.primaryUser = primaryUserInfo;
               networking.computerName = "Sunray";
               networking.hostName = "sunray";
-              #networking.knownNetworkServices = [
-              #  "Wi-Fi"
-              #  "USB 10/100/1000 LAN"
-              #];
+              networking.knownNetworkServices = [
+                "Wi-Fi"
+                "iPhone USB"
+                "Thunderbolt Bridge"
+                "Tailscale Tunnel"
+                "Barracuda VPN"
+                #"USB 10/100/1000 LAN"
+              ];
             }
           ];
         };
