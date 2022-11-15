@@ -235,6 +235,7 @@
         unthought-packages = import ./home/packages.nix;
         unthought-starship = import ./home/starship.nix;
         unthought-starship-symbols = import ./home/starship-symbols.nix;
+        unthought-tmux = import ./home/tmux.nix;
 
         # Modules I've created
         colors = import ./modules/home/colors;
