@@ -28,4 +28,8 @@
   # Aliases config in ./gh-aliases.nix
   programs.gh.enable = true;
   programs.gh.settings.git_protocol = "ssh";
+
+  home.packages = with pkgs; [
+    stgit
+  ];
 }
