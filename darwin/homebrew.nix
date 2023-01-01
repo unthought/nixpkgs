@@ -90,6 +90,7 @@ in
     "discord"
     "docker"
     #"firefox"
+    "github"
     "google-chrome"
     "google-drive"
     "gpg-suite"
