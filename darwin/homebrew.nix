@@ -83,6 +83,7 @@ in
     "anki"
     "arq"
     "balenaetcher"
+    "blender"
     #"cleanmymac"
     "element"
     "etrecheckpro"
