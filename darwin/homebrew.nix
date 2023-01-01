@@ -95,6 +95,7 @@ in
     "google-drive"
     "gpg-suite"
     "hammerspoon"
+    "inkscape"
     "keybase"
     "nvidia-geforce-now"
     "obsbot-me-tool"
