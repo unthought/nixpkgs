@@ -88,7 +88,7 @@ in
     "element"
     "etrecheckpro"
     "discord"
-    "firefox"
+    #"firefox"
     "google-chrome"
     "google-drive"
     "gpg-suite"
