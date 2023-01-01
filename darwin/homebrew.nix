@@ -101,6 +101,7 @@ in
     "parallels"
     "postman"
     "protonvpn"
+    "qutebrowser"
     "raindropio"
     "raycast"
     "secretive"
