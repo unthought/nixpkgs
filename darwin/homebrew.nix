@@ -88,6 +88,7 @@ in
     "element"
     "etrecheckpro"
     "discord"
+    "docker"
     #"firefox"
     "google-chrome"
     "google-drive"
